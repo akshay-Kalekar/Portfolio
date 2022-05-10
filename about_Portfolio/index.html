@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>About</title>
+    <script defer="defer" src="bundle.eab63a3ed402d2884767.js"></script>
+    <link href="main.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="content">
+        
+        <h1>Akshay<br />Kalekar</h1>
+        <p>
+          An aspiring <span>front-end developer.</span><br />Like to design and
+          build website.
+        </p>
+        
+      </div>
+    </div>
+    <canvas class="webgl"></canvas>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"
+      integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/CSSRulePlugin.min.js"
+      integrity="sha512-oYnRsy+bFXYr+btXcKk2dpzfERnCUc5G4GkJ0AO/XSvomLV7Xc7tZVhTsYIz9QzOAw9qo/6qoA6JTpzaYuHUGg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      const content = CSSRulePlugin.getRule(".content:before"),
+        h1 = document.querySelector("h1"),
+        p = document.querySelector("p"),
+        t1 = gsap.timeline();
+      t1.from(content, { delay: 0.5, duration: 4, cssRule: { scaleX: 0 } }),
+        t1.to(
+          h1,
+          {
+            duration: 2,
+            clipPath: "polygon(0 0,100% 0,100% 100%,0 100% )",
+            y: "20",
+          },
+          "-=3"
+        ),
+        t1.to(
+          p,
+          {
+            duration: 5,
+            clipPath: "polygon(0 0,100% 0,100% 100%,0 100% )",
+            y: "30",
+          },
+          "=-2"
+        );
+    </script>
+  </body>
+</html>
